@@ -20,5 +20,6 @@ contract Greeter {
         public 
     {
         greeting = _greeting;
+        
     }
 }

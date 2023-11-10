@@ -32,10 +32,15 @@ import("./tasks/mytask");
 const config: HardhatUserConfig = {
   solidity: "0.8.13",
   networks: {
-    ropsten: {
+    matic: {
       url: process.env.API_URL_MATIC || "",
       accounts:
        process.env.MUMB_PRIVATE_KEY !== undefined ? [process.env.MUMB_PRIVATE_KEY] : [],
+    },
+    sepolia: {
+      url: process.env.API_URL_SEPOLIA || "",
+      accounts:
+       process.env.SEPOLIA_PRIVATE_KEY !== undefined ? [process.env.SEPOLIA_PRIVATE_KEY] : [],
     },
     mainnet: {
       url: process.env.API_URL || "",
